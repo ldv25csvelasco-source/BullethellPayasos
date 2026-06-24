@@ -3,13 +3,11 @@ using UnityEngine;
 public class Bala : MonoBehaviour
 {
     public float velocidad = 10f;
-    public int daño = 1;
     private Vector2 direccion;
 
     public void Inicializar(Vector2 dir)
     {
         direccion = dir.normalized;
-        Debug.Log("Bala inicializada con dirección: " + direccion);
 
         Destroy(gameObject, 3f);
     }
@@ -21,13 +19,13 @@ public class Bala : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Jugador"))
         {
-            PlayerHealth vida = collision.GetComponent<PlayerHealth>();
+            Player_Health vida = collision.GetComponent<Player_Health>();
 
             if (vida != null)
             {
-                vida.TakeDamage(daño);
+                vida.RecibirDanio();
             }
 
             Destroy(gameObject);

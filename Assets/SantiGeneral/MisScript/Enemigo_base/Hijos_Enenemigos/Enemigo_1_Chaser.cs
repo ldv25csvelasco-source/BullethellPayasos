@@ -1,16 +1,28 @@
 using UnityEngine;
 
-public class Enemigo_1 : MonoBehaviour
+
+public class Enemigo_1 : Enemy_Stats
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private Transform player;
+
     void Start()
     {
-        
+        GameObject obj = GameObject.FindGameObjectWithTag("Jugador");
+
+        if (obj != null)
+        {
+            player = obj.transform;
+        }
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (player == null) return;
+
+        transform.position = Vector2.MoveTowards(
+            transform.position,
+            player.position,
+            Velocidad * Time.deltaTime
+        );
     }
 }

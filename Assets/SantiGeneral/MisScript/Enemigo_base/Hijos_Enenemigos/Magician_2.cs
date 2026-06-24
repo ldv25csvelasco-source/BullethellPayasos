@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Magician_2 : MonoBehaviour
+public class Magician_2 : Enemy_Stats
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

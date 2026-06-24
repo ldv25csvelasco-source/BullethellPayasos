@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Rebotes_3 : MonoBehaviour
+public class Rebotes_3 : Enemy_Stats
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

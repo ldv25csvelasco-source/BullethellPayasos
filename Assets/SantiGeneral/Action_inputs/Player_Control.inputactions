@@ -3,7 +3,7 @@
     "name": "Player_Control",
     "maps": [
         {
-            "name": "New action map",
+            "name": "Char_Gameplay",
             "id": "a5c912a3-4df1-45a5-8a3f-2e0b215e776c",
             "actions": [
                 {
@@ -41,24 +41,130 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Pausa",
+                    "type": "Button",
+                    "id": "de3612f6-d08c-4c4d-89c1-b57f9cd85c09",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Aceleron",
+                    "type": "Button",
+                    "id": "d81867c9-8ad4-4f4e-82e2-0ca7ed3c3d14",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "f36e0a41-9f3f-4a3a-a9aa-2ea12984657c",
-                    "path": "",
+                    "name": "WASD",
+                    "id": "59056381-cdc9-4d24-b203-0ffd2b542bf8",
+                    "path": "Dpad",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Movimiento",
-                    "isComposite": false,
+                    "isComposite": true,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "b85c0872-a66e-49ca-ad41-8c0f38b6c456",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "up",
+                    "id": "65cc041d-ebed-4b20-a00f-42d73c887988",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "120dc1f7-80f6-45a7-8d6e-74eb466c0bd2",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "6dc8a379-7370-4204-874e-ba1d98e3170c",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "43e611f9-f2de-4917-8890-73db2da208d8",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "28103f7f-aad5-4c2f-b1d1-d496091d5265",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "a5c8522c-3738-4a1a-a9b7-c4cdea59a20d",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "0acecf13-8db6-41c3-9abc-411ffad3e535",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Movimiento",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
                     "id": "5b5ea23f-2a20-4216-9c2c-ba32f7f25e3a",
-                    "path": "",
+                    "path": "<Keyboard>/P",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -69,7 +175,7 @@
                 {
                     "name": "",
                     "id": "4c2b10f2-82ca-4e19-9137-e69f4391b8e4",
-                    "path": "",
+                    "path": "<Keyboard>/L",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -79,8 +185,52 @@
                 },
                 {
                     "name": "",
-                    "id": "4974110f-7c8d-46e1-8ccb-725287a2da13",
-                    "path": "",
+                    "id": "14204a1d-4ee5-46fa-be58-abc3be1f3239",
+                    "path": "<Keyboard>/Escape",
+                    "interactions": "Tap",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bfc24e5e-7f13-4c0c-96a3-f627a39147e0",
+                    "path": "<Gamepad>/rightShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pausa",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3531af3-27f5-44b3-aa7b-b10a5a3c51af",
+                    "path": "<Keyboard>/O",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aceleron",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "06186e08-3c35-4141-8ee5-66ef3499e7e4",
+                    "path": "<Gamepad>/leftShoulder",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aceleron",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5741d84e-b6a8-43e5-b073-efecee00c351",
+                    "path": "<Mouse>/forwardButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
